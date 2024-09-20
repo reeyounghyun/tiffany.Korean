@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<link>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./app.js"></script>
+
   <link rel="stylesheet" href="./common.css"> <!-- 외부 CSS 파일 연결 -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://db.onlinewebfonts.com/c/2a691bed0d21959bed3b21381e52f07d?family=Santral-Book" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
 
   <!-- Tailwind CSS CDN 추가 -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -98,8 +99,62 @@
           </a>
         </div>
       </section>
-      <div class="productSlier w-full h-[500px] bg-black my-[30px]">
-        <P>슬라이드</P>
+      <div class="productSlider" id="productSlider1">
+        <div class="container">
+          <div class="slider-wrapper">
+            <!-- 슬라이드 이미지 컨테이너 -->
+            <div class="slider" id="slider1">
+              <div class="slide-item">
+                <img src="./public/proItem1.webp" alt="Item 1">
+                <p>엘사 퍼레티™ 본 링, 옐로우 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem2.webp" alt="Item 2">
+                <p>엘사 퍼레티™ 빈 디자인 화이어 링, 옐로우 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem3.webp" alt="Item 3">
+                <p>엘사 퍼레티™ 빈 디자인 펜던트, 로즈 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem4.webp" alt="Item 4">
+                <p>엘사 퍼레티™ 오픈 하트 펜던트, 옐로우 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem5.webp" alt="Item 5">
+                <p>엘사 퍼레티™ 다이아몬드 바이 더 야드™ 브레이슬릿</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem6.webp" alt="Item 6">
+                <p>엘사 퍼레티™ 클래식 목걸이, 화이트 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem7.webp" alt="Item 7">
+                <p>엘사 퍼레티™ 실버 반지</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem8.webp" alt="Item 8">
+                <p>엘사 퍼레티™ 펄 이어링</p>
+              </div>
+            </div>
+          </div>
+          <!-- 페이지네이션 -->
+          <div class="pagination-wrapper">
+            <button id="prevBtn">
+              <span class="material-symbols-outlined">
+              arrow_back_ios_new
+              </span>
+            </button>
+            <div class="pagination-line">
+              <div class="pagination-line-fill"></div>
+            </div>
+            <button id="nextBtn">
+              <span class="material-symbols-outlined">
+                arrow_forward_ios
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
       <section class="section-2 bg-[#fff]">
         <ul class="flex items-start gap-[25px] lg:flex-row flex-col">
@@ -292,8 +347,41 @@
           </div>
         </div>
       </section>
-      <div class="productSlier w-full h-[500px] bg-black my-[30px]">
-        <P>슬라이드</P>
+      <!-- 슬라이더 2 -->
+      <div class="productSlider"  id="productSlider2">
+        <div class="container">
+          <div class="slider-wrapper">
+            <!-- 슬라이드 이미지 컨테이너 -->
+            <div class="slider" id="slider2">
+              <!-- 슬라이드 아이템들 -->
+              <div class="slide-item">
+                <img src="path_to_image1.jpg" alt="Item 1">
+                <p>임시 아이템 1</p>
+              </div>
+              <div class="slide-item">
+                <img src="path_to_image2.jpg" alt="Item 2">
+                <p>임시 아이템 2</p>
+              </div>
+              <div class="slide-item">
+                <img src="path_to_image3.jpg" alt="Item 3">
+                <p>임시 아이템 3</p>
+              </div>
+            </div>
+          </div>
+          <!-- 네비게이션만 있고 페이지네이션은 없음 -->
+          <div class="pagination-wrapper">
+            <button id="prevBtn2">
+              <span class="material-symbols-outlined">
+                arrow_back_ios_new
+              </span>
+            </button>
+            <button id="nextBtn2">
+              <span class="material-symbols-outlined">
+                arrow_forward_ios
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
       <section class="section-4 pb-[72px] xl:pb-[96px] mx-auto p-[12px] w-full bg-[#fff]">
         <ul class="flex items-start justify-center xl:flex-row sm:flex-wrap gap-[25px] ">
@@ -372,7 +460,7 @@
         </ul>
       </section>
     </div>
-    <footer class="relative bg-[#fbf9f7] xl:pt-[96px] xl:pb-[44px] pt-[72px] pb-[25px]">
+    <footer class="bg-[#fbf9f7] xl:pt-[96px] xl:pb-[44px] pt-[72px] pb-[25px]">
       <div class="p-[12px] w-full mx-auto">
         <div class="max-w-[1280px] pl-[12px] pr-[12px] relative w-full mx-auto">
           <div class="wrap flex items-start lg:flex-row flex-wrap">
@@ -462,5 +550,6 @@
       </div>
     </footer>
   </div>
+  <script src="./app.js"></script>
 </body>
 </html>

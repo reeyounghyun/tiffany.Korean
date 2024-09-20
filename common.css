@@ -90,7 +90,6 @@ span{
 }
 
 /* header */
-
 #logo{
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -136,6 +135,13 @@ span{
   display: none;
 }
 
+/* footer */
+footer {
+  position: relative;
+  z-index: 0;
+}
+
+
 /* 비디오를 전체 화면에 맞게 고정 */
 .tf-image-and-text video {
   width: 100%;
@@ -144,9 +150,18 @@ span{
 }
 
 .tf-image{
-  width: 100%;
-  height: 780px;
+  position: relative; /* relative로 설정하여 문서 흐름 유지 */
+  z-index: 1; /* z-index를 낮게 설정하여 다른 요소 위로 올라오지 않게 함 */
+  overflow: hidden; /* 내용이 넘치지 않도록 설정 */
 }
+
+/* 동영상 요소 */
+.tf-image video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .tf-image-and-text {
   position: fixed;
@@ -166,6 +181,7 @@ span{
   top: 0;
   left: 0;
 }
+
 
 /* 콘텐츠 영역 */
 
@@ -246,4 +262,111 @@ span{
   .se4_items{
     width: 40%;
   }
+}
+
+/* productSlider 슬라이드 */
+.productSlider {
+  width: 100%;
+  height: 500px;
+  margin: 30px 0;
+  padding-top: 4rem;
+}
+
+.productSlider .container {
+  padding: 32px 0;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+/* 슬라이드 항목 */
+.slide-item {
+  min-width: 20%;
+  padding: 0 15px;
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+.slide-item img {
+  width:100%;
+}
+
+.slide-item p {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.35;
+  word-break: keep-all;
+  white-space: pre-line;
+}
+
+/* 페이지네이션 및 스타일 */
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 16px auto 0 auto;
+}
+
+#prevBtn, #nextBtn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 68px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+#prevBtn:hover, #nextBtn:hover{
+  background-color: #fff;
+  color: #00bfff;
+  box-shadow: -3px 0px 7px #c0c0c0;
+  transition: all 0.3s;
+  
+}
+/* #prevBtn:disabled, #nextBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} */
+
+/* 페이지네이션*/
+.pagination-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  margin: 0 16px;
+  position: relative;
+}
+
+.pagination-line-fill {
+  position: absolute;
+  height: 100%;
+  background-color: #00bfff;
+  width: 0%; /* 초기 너비 */
+  transition: width 0.5s ease;
+}
+
+
+/* 슬라이더 2 스타일 */
+#slider2 {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+#slider2 .slide-item {
+  min-width: 100%; /* 슬라이드 아이템의 너비를 100%로 설정 */
+  box-sizing: border-box;
 }
