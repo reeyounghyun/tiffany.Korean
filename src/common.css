@@ -52,20 +52,25 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -89,6 +94,14 @@ span{
   white-space: pre-line;
 }
 
+.wrap{
+  position: relative;
+}
+
+.bg-white-contain{
+  position: relative;
+}
+
 /* header */
 #logo{
   letter-spacing: 1px;
@@ -100,13 +113,13 @@ span{
 
 #navbar {
   z-index: 1000;
-  background-color: transparent; /* 헤더 배경을 투명하게 설정 */
-  transition: background-color 0.3s ease; /* 배경색이 바뀔 때 부드러운 전환 */
+  background-color: transparent;
+  transition: background-color 0.3s ease; 
 }
 
 #navbar:hover{
   background-color: rgb(255, 255, 255);
-  transition: background-color 0.3s ease; /* 배경색이 바뀔 때 부드러운 전환 */
+  transition: background-color 0.3s ease; 
 }
 
 #navbar.nav-hidden {
@@ -138,7 +151,10 @@ span{
 /* footer */
 footer {
   position: relative;
-  z-index: 0;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -150,9 +166,9 @@ footer {
 }
 
 .tf-image{
-  position: relative; /* relative로 설정하여 문서 흐름 유지 */
-  z-index: 1; /* z-index를 낮게 설정하여 다른 요소 위로 올라오지 않게 함 */
-  overflow: hidden; /* 내용이 넘치지 않도록 설정 */
+  position: relative; 
+  z-index: 1; 
+  overflow: hidden;
 }
 
 /* 동영상 요소 */
@@ -181,7 +197,6 @@ footer {
   top: 0;
   left: 0;
 }
-
 
 /* 콘텐츠 영역 */
 
@@ -287,7 +302,7 @@ footer {
 }
 
 /* 슬라이드 항목 */
-.slide-item {
+.productSlider  .slide-item {
   min-width: 20%;
   padding: 0 15px;
   text-align: center;
@@ -336,10 +351,6 @@ footer {
   transition: all 0.3s;
   
 }
-/* #prevBtn:disabled, #nextBtn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-} */
 
 /* 페이지네이션*/
 .pagination-line {
@@ -359,32 +370,78 @@ footer {
 }
 
 
-/* 슬라이더 2 스타일 */
-#slider2 {
-  display: flex;
+/* 슬라이드2 */
+.swiper {
   width: 100%;
-  overflow: hidden;
+  height: 100%;
 }
 
-#slider2 .slide-item {
-  min-width: 100%; /* 슬라이드 아이템의 너비를 100%로 설정 */
-  box-sizing: border-box;
-}
-
-#productItemSlider .slider-wrapper {
-  overflow: hidden; /* 슬라이더의 밖에 있는 슬라이드는 보이지 않도록 */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width:800px!important;
 }
 
-#productItemSlider .slider {
-  display: flex;
-  transition: transform 1s ease-in-out;
+.swiper-slide-active{
+  width:800px!important;
 }
 
-#productItemSlider .slide-item {
-  flex: 0 0 33.33%; /* 슬라이드 하나당 화면의 1/3 차지 */
-  max-width: 33.33%;
-  box-sizing: border-box;
-  padding: 0 10px; /* 각 슬라이드 간 여백 추가 */
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide p{
+  font-family: GowunBatang-Regular;
+  display: block;
+  margin-top: 5px;
+  padding-top: 24px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.productItemSlider2{
+  padding-bottom: 1rem;
+}
+
+.productItemSlider2 .swiper-button-next{
+  right: 24%!important;
+  color: rgb(65, 65, 65);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.productItemSlider2 .swiper-button-next:hover{
+  background: #fff;
+  box-shadow: 4px -1px 3px 0px rgba(72, 72, 72, 0.749);
+  transition: all 0.3s;
+}
+
+.productItemSlider2 .swiper-button-prev{
+  left: 16% !important;
+  color: rgb(65, 65, 65);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.productItemSlider2 .swiper-button-prev:hover{
+  background: #fff;
+  box-shadow: -3px -1px 3px 0px rgba(72, 72, 72, 0.749);
+  transition: all 0.3s;
+}
+
+
+:root {
+  --swiper-navigation-size: 26px!important;
 }
