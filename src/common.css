@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: 'GowunBatang-Regular';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
@@ -111,6 +115,12 @@ span{
   transition: opacity 0.3s;
 }
 
+@media screen and (max-width:1024px) {
+  #logo{
+    font-size: 32px;
+  }
+}
+
 #navbar {
   z-index: 1000;
   background-color: transparent;
@@ -147,6 +157,12 @@ span{
 #logo.hidden {
   display: none;
 }
+@media screen and (max-width:1024px) {
+  #logo.hidden {
+    display: block;
+    font-size: 47px;
+  }
+}
 
 /* footer */
 footer {
@@ -157,8 +173,6 @@ footer {
   height: 100%;
 }
 
-
-/* 비디오를 전체 화면에 맞게 고정 */
 .tf-image-and-text video {
   width: 100%;
   height: 100%;
@@ -171,21 +185,19 @@ footer {
   overflow: hidden;
 }
 
-/* 동영상 요소 */
 .tf-image video {
   width: 100%;
   height: auto;
   display: block;
 }
 
-
 .tf-image-and-text {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; 
-  z-index: -1; 
+  height: 100vh;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -198,7 +210,7 @@ footer {
   left: 0;
 }
 
-/* 콘텐츠 영역 */
+/**** 콘텐츠 영역 ******/
 
 /* 1.버튼 애니메이션 */
 .w-full.relative.z-20 {
@@ -273,9 +285,21 @@ footer {
 .se4_items{
   width: 23%;
 }
+
+@media screen and (max-width:1024px) {
+  .se4_items{
+    width: 45%;
+  }
+}
 @media screen and (max-width:640px) {
   .se4_items{
     width: 40%;
+  }
+}
+
+@media screen and (max-width:639px) {
+  .se4_items{
+    width: 100%;
   }
 }
 
@@ -307,6 +331,13 @@ footer {
   padding: 0 15px;
   text-align: center;
   box-sizing: border-box; 
+}
+
+@media screen and (max-width:1024px) {
+  .productSlider .slide-item{
+    min-width: 44%;
+    padding: 0px 5px;
+  }
 }
 
 .slide-item img {
@@ -365,83 +396,11 @@ footer {
   position: absolute;
   height: 100%;
   background-color: #00bfff;
-  width: 0%; /* 초기 너비 */
+  width: 0%;
   transition: width 0.5s ease;
 }
 
-
-/* 슬라이드2 */
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width:800px!important;
-}
-
-.swiper-slide-active{
-  width:800px!important;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper-slide p{
-  font-family: GowunBatang-Regular;
-  display: block;
-  margin-top: 5px;
-  padding-top: 24px;
-  font-size: 40px;
-  font-weight: 500;
-  letter-spacing: 2px;
-}
-
-.productItemSlider2{
-  padding-bottom: 1rem;
-}
-
-.productItemSlider2 .swiper-button-next{
-  right: 24%!important;
-  color: rgb(65, 65, 65);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  transition: all 0.3s;
-}
-
-.productItemSlider2 .swiper-button-next:hover{
-  background: #fff;
-  box-shadow: 4px -1px 3px 0px rgba(72, 72, 72, 0.749);
-  transition: all 0.3s;
-}
-
-.productItemSlider2 .swiper-button-prev{
-  left: 16% !important;
-  color: rgb(65, 65, 65);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  transition: all 0.3s;
-}
-
-.productItemSlider2 .swiper-button-prev:hover{
-  background: #fff;
-  box-shadow: -3px -1px 3px 0px rgba(72, 72, 72, 0.749);
-  transition: all 0.3s;
-}
-
-
-:root {
-  --swiper-navigation-size: 26px!important;
+.menu>span{
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
 }

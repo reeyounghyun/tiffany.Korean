@@ -1,9 +1,8 @@
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./build/*.html'],
   theme: {
-    extend: {
-      colors: {
-        customColor: '#abcdef',
-      }
-    }
-  }
-};
+    extend: {},
+  },
+  plugins: [],
+}

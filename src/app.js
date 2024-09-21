@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const logo = document.getElementById("logo");
 
   if (!navbar || !logo) {
-    console.error('Navbar or logo element not found');
+    // Navbar 또는 logo 요소가 없을 때의 처리.
     return;
   }
 
@@ -20,11 +20,12 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Initialize on page load
+  handleScroll(); // 페이지 로드 시 초기화
 });
-//handleScroll end
 
-// productSlider stert 슬라이드
+// handleScroll end
+
+// productSlider start 슬라이드
 document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('nextBtn');
   const prevBtn = document.getElementById('prevBtn');
@@ -50,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       slider.insertBefore(lastClone, slider.firstChild);
     }
   }
-  
 
   // 슬라이더 초기 위치 설정
   function setInitialPosition() {
@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const percentage = (actualIndex / (totalSlides - 1)) * 100; // 슬라이드 수를 기반으로 백분율 계산
     paginationLineFill.style.width = `${percentage}%`;
   }
-  
 
   // 슬라이더 위치 업데이트
   function updateSliderPosition(animate = true) {
@@ -107,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateSliderPosition(false); // 애니메이션 없이 바로 위치 조정
     }
   }
-  
 
   // 자동 재생 시작
   function startAutoplay() {
