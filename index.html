@@ -15,7 +15,7 @@
   <!-- Tailwind CSS CDN 추가 -->
   <script src="https://cdn.tailwindcss.com"></script>
     
-  <title>티파니앤코코 공식 온라인 스토어</title>
+  <title>티파니앤코 공식 온라인 스토어</title>
 </head>
 <body>
   <div class="wrap">
@@ -347,8 +347,59 @@
           </div>
         </div>
       </section>
-      <div class="productSlier w-full h-[500px] bg-black my-[30px]">
-        <P>슬라이드</P>
+      <div id="productItemSlider" class="productItemSlider">
+        <div class="container">
+          <div class="slider-wrapper">
+            <!-- 슬라이드 이미지 컨테이너 -->
+            <div class="slider" id="sliItemder">
+              <div class="slide-item">
+                <img src="./public/proItem1.webp" alt="Item 1">
+                <p>엘사 퍼레티™ 본 링, 옐로우 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem2.webp" alt="Item 2">
+                <p>엘사 퍼레티™ 빈 디자인 화이어 링, 옐로우 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem3.webp" alt="Item 3">
+                <p>엘사 퍼레티™ 빈 디자인 펜던트, 로즈 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem4.webp" alt="Item 4">
+                <p>엘사 퍼레티™ 오픈 하트 펜던트, 옐로우 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem5.webp" alt="Item 5">
+                <p>엘사 퍼레티™ 다이아몬드 바이 더 야드™ 브레이슬릿</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem6.webp" alt="Item 6">
+                <p>엘사 퍼레티™ 클래식 목걸이, 화이트 골드</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem7.webp" alt="Item 7">
+                <p>엘사 퍼레티™ 실버 반지</p>
+              </div>
+              <div class="slide-item">
+                <img src="./public/proItem8.webp" alt="Item 8">
+                <p>엘사 퍼레티™ 펄 이어링</p>
+              </div>
+            </div>
+          </div>
+          <!-- 페이지네이션 -->
+          <div class="pagination-wrapper">
+            <button id="prevItemBtn">
+              <span class="material-symbols-outlined">
+              arrow_back_ios_new
+              </span>
+            </button>
+            <button id="nextItemBtn">
+              <span class="material-symbols-outlined">
+                arrow_forward_ios
+                </span>
+            </button>
+          </div>
+        </div>
       </div>
       <section class="section-4 pb-[72px] xl:pb-[96px] mx-auto p-[12px] w-full bg-[#fff]">
         <ul class="flex items-start justify-center xl:flex-row sm:flex-wrap gap-[25px] ">

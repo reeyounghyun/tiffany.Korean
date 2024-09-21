@@ -370,3 +370,21 @@ footer {
   min-width: 100%; /* 슬라이드 아이템의 너비를 100%로 설정 */
   box-sizing: border-box;
 }
+
+#productItemSlider .slider-wrapper {
+  overflow: hidden; /* 슬라이더의 밖에 있는 슬라이드는 보이지 않도록 */
+  display: flex;
+  justify-content: center;
+}
+
+#productItemSlider .slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+#productItemSlider .slide-item {
+  flex: 0 0 33.33%; /* 슬라이드 하나당 화면의 1/3 차지 */
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 0 10px; /* 각 슬라이드 간 여백 추가 */
+}
