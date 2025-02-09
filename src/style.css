@@ -100,6 +100,7 @@ span{
 
 .wrap{
   position: relative;
+  overflow: hidden;
 }
 
 .bg-white-contain{
@@ -401,7 +402,6 @@ footer {
 
 
 /* footer */
-
 .foot-area{
   position: relative;
 }
